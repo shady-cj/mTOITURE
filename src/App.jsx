@@ -1,7 +1,9 @@
 import './App.css'
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Header from "./components/Header"
+import Header from "./sections/Header";
+import Services from "./sections/Services";
+import Benefits from "./sections/Benefits"
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <Services />
+      <Benefits />
     </div>
   )
 }
