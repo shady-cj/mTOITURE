@@ -1,0 +1,29 @@
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="14" height="13" fill="#1E1E1E"/>
+<g id="Landing page" clip-path="url(#clip0_1_2)">
+<rect width="1440" height="7592" transform="translate(-187 -828)" fill="white"/>
+<g id="hero section">
+<rect width="1440" height="960" transform="translate(-187 -828)" fill="url(#paint0_linear_1_2)"/>
+<g id="Frame 33880">
+<g id="Frame 33872">
+<rect x="-66.5" y="-18.5" width="244" height="78" rx="7.5" fill="#EBEBF5"/>
+<rect x="-66.5" y="-18.5" width="244" height="78" rx="7.5" stroke="#B3DBE6"/>
+<g id="Frame 33879">
+<g id="Frame 16">
+<path id="Star 1" d="M6.02605 1.18273C6.26611 0.151768 7.73389 0.151771 7.97394 1.18273L8.56696 3.72952C8.67969 4.21365 9.13092 4.54149 9.62619 4.49909L12.2316 4.27609C13.2863 4.18581 13.7398 5.58175 12.8335 6.12864L10.5946 7.47964C10.169 7.73646 9.99667 8.2669 10.19 8.72483L11.2072 11.1338C11.619 12.109 10.4316 12.9717 9.63137 12.2787L7.65464 10.5669C7.27887 10.2415 6.72113 10.2415 6.34536 10.5669L4.36863 12.2787C3.56844 12.9717 2.38098 12.109 2.79276 11.1338L3.80996 8.72483C4.00333 8.2669 3.83097 7.73646 3.40537 7.47964L1.16648 6.12864C0.260163 5.58175 0.713732 4.18581 1.76841 4.27609L4.37381 4.49909C4.86908 4.54149 5.32031 4.21365 5.43304 3.72952L6.02605 1.18273Z" fill="#F9D203"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_2" x1="426" y1="558" x2="-19.9999" y2="-9.74079e-05" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EFEFFE"/>
+<stop offset="1" stop-color="#C0C6F0"/>
+</linearGradient>
+<clipPath id="clip0_1_2">
+<rect width="1440" height="7592" fill="white" transform="translate(-187 -828)"/>
+</clipPath>
+</defs>
+</svg>
