@@ -49,7 +49,7 @@ const Index = () => {
                     </div>
 
                 </div>
-                <div className="flex-1"><img src={engineerRepair} className="h-full w-full object-cover rounded-xl" alt="" /></div>
+                <div className="flex-1"><img src={engineerRepair} className="h-full w-full object-cover rounded-xl aspect-[80/91]" alt="" /></div>
             </div>
             <div className="border-t border-solid border-[#E6E6F5] pt-[5rem]">
                 <div className="flex gap-[6rem] items-center">
