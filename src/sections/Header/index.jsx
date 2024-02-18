@@ -1,7 +1,7 @@
 import arrowLeft from "../../assets/arrow-left.svg"
 const Index = () => {
     return (
-        <div className="fixed max-w-[inherit] top-[2.5rem] w-[inherit] px-[7.5rem]">
+        <div className="fixed z-10 max-w-[inherit] top-[2.5rem] w-[inherit] px-[7.5rem]">
             <header className='w-[80vw] bg-[#0E0E1A] w-full rounded-[2rem] py-2 pr-3 pl-6 flex justify-between items-center'>
                 <div className="text-sm font-semibold leading-4 text-[#F3F3FB]">
                     mTOITURE
