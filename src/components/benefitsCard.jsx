@@ -1,7 +1,7 @@
 import tick from "../assets/tick.svg"
 const BenefitsCard = ({ title, content }) => {
     return (
-        <div className="flex-1">
+        <div className="basis-[58%] px-6 py-4 border border-solid border-[#E8E8FA] rounded-xl">
             <div className="w-6 h-6 rounded-full bg-[#E8E8FA] flex items-center justify-center">
                 <img src={tick} alt="" />
             </div>

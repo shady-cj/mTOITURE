@@ -6,6 +6,7 @@ import Services from "./sections/Services";
 import Benefits from "./sections/Benefits"
 import Gallery from "./sections/Gallery"
 import Reviews from "./sections/Reviews"
+import Footer from "./sections/Footer"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Benefits />
       <Gallery />
       <Reviews />
+      <Footer />
     </div>
   )
 }

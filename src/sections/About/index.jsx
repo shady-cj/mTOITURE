@@ -1,5 +1,5 @@
 import tick from "../../assets/tick.svg"
-import valuesImage from "../../assets/values-image.jpg"
+import valuesImage from "../../assets/values-roof.jpg"
 import engineerRepair from "../../assets/engineer-repair.png"
 const values = [
     { title: "Expertise", desc: "Our team of skilled and certified roofers boasts extensive knowledge and experience, ensuring every project is tackled with confidence." },
@@ -11,7 +11,7 @@ const values = [
 const Index = () => {
     return (
         <section id="about" className="px-[7.5rem] py-[6rem] bg-[#F7F7FF]">
-            <div className="flex justify-between mb-[5rem] lg:gap-[5rem] xl:gap-[10rem]">
+            <div className="flex px-[7rem] xl:px-[10rem] justify-between mb-[5rem] lg:gap-8 xl:gap-12">
                 <div className="flex-1">
 
                     <h4 className="font-semibold text-sm leading-4 text-[#48487F]">
@@ -23,7 +23,7 @@ const Index = () => {
                     <p className="mt-6 max-w-[30rem] font-normal text-base leading-8 text-[#666666]">
                         Since 2017, mTOITURE has proudly served the Greater Montreal Area as your trusted roofing partner. We specialize in shingle roof installations, repairs, and replacements, utilizing our in-depth knowledge and proven practices to deliver lasting results you can rely on.
                     </p>
-                    <div className="mt-12">
+                    {/* <div className="mt-12">
                         <h6 className="font-medium text-sm leading-4 text-[#0E0E1A]">We are</h6>
                         <div className="mt-4">
                             <div className="pr-2 py-0.5 flex items-center gap-3 w-fit rounded-2xl bg-[#FFFFFF]">
@@ -46,7 +46,7 @@ const Index = () => {
                             </div>
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
                 <div className="flex-1"><img src={engineerRepair} className="h-full w-full object-cover rounded-xl aspect-[80/91]" alt="" /></div>

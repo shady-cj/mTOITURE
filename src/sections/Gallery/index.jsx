@@ -17,42 +17,54 @@ const Index = () => {
                 See <span className='text-[#48487F]'>Our Quality Work</span> for yourself
             </h2>
             <div className="mt-[5.6rem] flex flex-col gap-3.5">
-                <div className="gap-3.5 flex">
+                <div className="gap-3.5 flex max-h-[36rem]">
 
                     <div className="flex-1">
                         <img className="h-full w-full rounded-lg" src={project1} alt="" />
                     </div>
-                    <div className="flex-1">
-                        <img className="h-full w-full rounded-lg" src={project2} alt="" />
+                    <div className="flex-1 flex flex-col gap-3.5 ">
+                        <div className="flex-1 flex gap-3.5">
 
-                    </div>
-                    <div className="flex-1">
-                        <img className="h-full w-full rounded-lg" src={project3} alt="" />
+                            <div className="flex-1">
+                                <img className="h-full w-full rounded-lg" src={project2} alt="" />
 
-                    </div>
-                    <div className="flex-1">
-                        <img className="h-full w-full rounded-lg" src={project4} alt="" />
+                            </div>
+                            <div className="flex-1">
+                                <img className="h-full w-full rounded-lg" src={project3} alt="" />
 
+                            </div>
+                        </div>
+
+                        <div className="flex-1 max-h-[17rem]">
+                            <img className="h-full w-full object-cover rounded-lg" src={project4} alt="" />
+                        </div>
                     </div>
+
                 </div>
-                <div className="gap-3.5 flex">
+                <div className="gap-3.5 flex max-h-[36rem]">
+                    <div className="flex-1 flex flex-col gap-3.5">
 
+                        <div className="flex-1 flex gap-3.5">
+
+                            <div className="flex-1">
+                                <img className="h-full w-full rounded-lg" src={project6} alt="" />
+
+                            </div>
+                            <div className="flex-1">
+                                <img className="h-full w-full rounded-lg" src={project7} alt="" />
+
+                            </div>
+                        </div>
+
+                        <div className="flex-1 max-h-[17rem]">
+                            <img className="h-full w-full object-cover rounded-lg" src={project8} alt="" />
+
+                        </div>
+                    </div>
                     <div className="flex-1">
                         <img className="h-full w-full rounded-lg" src={project5} alt="" />
-
                     </div>
-                    <div className="flex-1">
-                        <img className="h-full w-full rounded-lg" src={project6} alt="" />
 
-                    </div>
-                    <div className="flex-1">
-                        <img className="h-full w-full rounded-lg" src={project7} alt="" />
-
-                    </div>
-                    <div className="flex-1">
-                        <img className="h-full w-full rounded-lg" src={project8} alt="" />
-
-                    </div>
                 </div>
 
             </div>
