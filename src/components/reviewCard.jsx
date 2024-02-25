@@ -1,7 +1,7 @@
 import google from "../assets/google.png"
 const ReviewCard = ({ review, author }) => {
     return (
-        <div className="px-4 py-8 max-w-[30rem] bg-[#F2F2FC] border-[0.6px] border-[#DDDDF0] shadow-[-8px_8px_16px_0px_#0E0E1A0A] rounded-lg flex flex-col gap-8">
+        <div className="sticky top-0 px-4 py-8 max-w-[30rem] bg-[#F2F2FC] border-[0.6px] border-[#DDDDF0] shadow-[-8px_8px_16px_0px_#0E0E1A0A] rounded-lg flex flex-col gap-8">
             <p className="font-normal text-base leading-7 text-[#4D4D4D]">
                 {review}
             </p>

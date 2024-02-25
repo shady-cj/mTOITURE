@@ -86,7 +86,7 @@ const Index = () => {
                         </div>
                         <p className="text-sm leading-4 font-normal text-[#2F2F34] text-nowrap">Fully Insured & Bonded</p>
                     </div>
-                    <div className="absolute translate-y-[30%] flex gap-6 align-center bg-[#DDECF0] border border-solid border-[#A7D4E0] py-4 px-6 rounded-[26px] left-0 right-0 bottom-0 shadow-[-24px_-24px_48px_0px_#0000001F,24px_24px_48px_0px_#0000001F]">
+                    <div className="fixed translate-y-[30%] flex gap-6 align-center bg-[#DDECF0] border border-solid border-[#A7D4E0] py-4 px-6 rounded-[26px] bottom-8 z-10 shadow-[-24px_-24px_48px_0px_#0000001F,24px_24px_48px_0px_#0000001F]">
                         <div className="">
                             <img src={fbHero} alt="" />
                         </div>

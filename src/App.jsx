@@ -10,7 +10,7 @@ import Footer from "./sections/Footer"
 
 function App() {
   return (
-    <div className="container mx-auto my-0 max-w-[1440px] overflow-x-hidden w-screen">
+    <div className="container mx-auto my-0 max-w-[1440px] w-screen">
       <Header />
       <Hero />
       <About />
