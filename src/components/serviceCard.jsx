@@ -1,5 +1,5 @@
 import arrowLeft from "../assets/arrow-left.svg"
-const ServiceCard = ({ title, content }) => {
+const ServiceCard = ({ title, content, setOpenQuote }) => {
     return (
         <div className="py-6 px-4 bg-[#F7F7FF] rounded-md basis-[47%]">
 
@@ -15,7 +15,7 @@ const ServiceCard = ({ title, content }) => {
                     </p>
                 </div>
 
-                <a href="" className="mt-4 pl-[18px] text-sm font-semibold leading-4 text-[#48487F] flex items-center gap-1">
+                <a onClick={() => setOpenQuote(true)} className="mt-4 pl-[18px] text-sm font-semibold leading-4 text-[#48487F] flex items-center gap-1">
                     Get a Free Quote <img src={arrowLeft} alt="" />
                 </a>
             </div>

@@ -12,6 +12,10 @@
             "slnt" 0;
         font-optical-sizing: auto;
     }
+
+    a {
+        cursor: pointer !important;
+    }
 }
 
 html {

@@ -7,7 +7,7 @@ const services = [
     { title: "Roof Repairs", content: "We offer a variety of repair services to fix any damage to your roof." },
     { title: "Removal & Replacement", content: "We offer a complete replacement service to install a new roof on your home or business." }
 ]
-const Index = () => {
+const Index = ({ setOpenQuote }) => {
     return (
         <section id="services" className="px-[7.5rem] py-[6rem]">
             <h4 className="font-semibold text-sm leading-4 text-[#48487F] text-center">
@@ -21,7 +21,7 @@ const Index = () => {
             </p>
             <div className="mt-[3.5rem] flex gap-8">
                 <div className="flex flex-wrap gap-8">
-                    {services.map(service => <ServiceCard key={service.title} {...service} />)}
+                    {services.map(service => <ServiceCard key={service.title} {...service} setOpenQuote={setOpenQuote} />)}
                 </div>
                 <div className="">
                     <img src={roof} className="w-[80%] h-full object-cover rounded-xl" alt="" />

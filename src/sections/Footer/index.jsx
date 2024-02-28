@@ -2,7 +2,7 @@ import './index.css';
 import arrowLeft from "../../assets/arrow-left.svg";
 import phone from "../../assets/phone.svg"
 import fb from "../../assets/fb-gray.svg"
-const Index = () => {
+const Index = ({ setOpenQuote }) => {
     return (
         <section className='px-[7.5rem] pt-[6rem] pb-6 bg-[#0E0E1A]'>
             <h2 className='text-[#C8C8DB] mt-3 font-semibold text-[2.5rem] leading-[3rem] max-w-[28rem] mx-auto text-center'>
@@ -11,7 +11,7 @@ const Index = () => {
             <p className="mt-4 max-w-[21rem] mx-auto font-normal text-center text-base leading-7 text-[#DBDBE5]">
                 Contact mTOITURE today for a free inspection and personalized quote.
             </p>
-            <a href="" className="mt-12 rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-base text-[#48487F] font-[Inter] flex items-center gap-1 w-fit mx-auto">Get a Free Quote <img src={arrowLeft} alt="" /></a>
+            <a onClick={() => setOpenQuote(true)} className="mt-12 rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-base text-[#48487F] font-[Inter] flex items-center gap-1 w-fit mx-auto">Get a Free Quote <img src={arrowLeft} alt="" /></a>
 
             <div className="mt-[5rem] py-[5rem] border-t border-solid border-[#1F1F29] flex justify-between">
                 <div>
