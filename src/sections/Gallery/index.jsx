@@ -6,15 +6,15 @@ import project5 from "../../assets/project-5.jpg"
 import project6 from "../../assets/project-6.jpg"
 import project7 from "../../assets/project-7.jpg"
 import project8 from "../../assets/project-8.jpg"
-
-const Index = () => {
+import translations from "../../translation/galleryTranslation"
+const Index = ({ lang }) => {
     return (
         <section className="px-[7.5rem] py-[6rem]">
             <h4 className='font-semibold text-sm leading-4 text-center text-[#48487F]'>
-                GALLERY
+                {translations[lang][0]}
             </h4>
             <h2 className='text-[#0E0E1A] mt-3 font-semibold text-[2.5rem] leading-[3rem] max-w-[25rem] mx-auto text-center'>
-                See <span className='text-[#48487F]'>Our Quality Work</span> for yourself
+                {translations[lang][1]} <span className='text-[#48487F]'>{translations[lang][2]}</span> {translations[lang][3]}
             </h2>
             <div className="mt-[5.6rem] flex flex-col gap-3.5">
                 <div className="gap-3.5 flex max-h-[36rem]">

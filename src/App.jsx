@@ -18,14 +18,14 @@ function App() {
     <div className="container mx-auto my-0 max-w-[1440px] w-screen">
       {
 
-        openQuote && <QuoteForm setOpenQuote={setOpenQuote} />
+        openQuote && <QuoteForm setOpenQuote={setOpenQuote} lang={lang} />
       }
       <Header setOpenQuote={setOpenQuote} lang={lang} />
       <Hero setOpenQuote={setOpenQuote} lang={lang} />
       <About lang={lang} />
       <Services setOpenQuote={setOpenQuote} lang={lang} />
       <Benefits setOpenQuote={setOpenQuote} lang={lang} />
-      <Gallery />
+      <Gallery lang={lang} />
       <Reviews lang={lang} />
       <Footer setOpenQuote={setOpenQuote} lang={lang} />
       <div className='fixed overflow-hidden bottom-2 translate-x-[20%] rounded-xl bg-white flex border border-solid border-[#A7D4E0] text-[#48487F]'>
