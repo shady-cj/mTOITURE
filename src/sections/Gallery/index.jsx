@@ -9,7 +9,7 @@ import project8 from "../../assets/project-8.jpg"
 import translations from "../../translation/galleryTranslation"
 const Index = ({ lang }) => {
     return (
-        <section className="px-[7.5rem] py-[6rem]">
+        <section className="px-4 lg:px-[5rem] xl:px-[7.5rem] py-[6rem]" id="gallery">
             <h4 className='font-semibold text-sm leading-4 text-center text-[#48487F]'>
                 {translations[lang][0]}
             </h4>
@@ -22,7 +22,7 @@ const Index = ({ lang }) => {
                     <div className="flex-1">
                         <img className="h-full w-full rounded-lg" src={project1} alt="" />
                     </div>
-                    <div className="flex-1 flex flex-col gap-3.5 ">
+                    <div className="flex-1 flex flex-row md:flex-col gap-3.5 ">
                         <div className="flex-1 flex gap-3.5">
 
                             <div className="flex-1">
@@ -42,7 +42,7 @@ const Index = ({ lang }) => {
 
                 </div>
                 <div className="gap-3.5 flex max-h-[36rem]">
-                    <div className="flex-1 flex flex-col gap-3.5">
+                    <div className="flex-1 flex flex-row md:flex-col gap-3.5">
 
                         <div className="flex-1 flex gap-3.5">
 

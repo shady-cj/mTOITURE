@@ -11,6 +11,7 @@
         font-variation-settings:
             "slnt" 0;
         font-optical-sizing: auto;
+        scroll-behavior: smooth;
     }
 
     a {

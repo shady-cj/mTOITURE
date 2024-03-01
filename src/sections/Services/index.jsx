@@ -18,22 +18,22 @@ const services = {
 }
 const Index = ({ setOpenQuote, lang }) => {
     return (
-        <section id="services" className="px-[7.5rem] py-[6rem]">
-            <h4 className="font-semibold text-sm leading-4 text-[#48487F] text-center">
+        <section id="services" className="px-4 md:px-6 lg:px-[5rem] xl:px-[7.5rem] py-[6rem]">
+            <h4 className="font-semibold text-sm leading-4 text-[#48487F] text-left md:text-center">
                 {translations[lang][0]}
             </h4>
-            <h2 className="mt-3 max-w-[30rem] font-semibold text-[2.5rem] leading-[3rem] text-[#0E0E1A] text-center mx-auto">
+            <h2 className="mt-3 max-w-[30rem] font-semibold text-[2.5rem] leading-[3rem] text-[#0E0E1A] text-left md:text-center mx-auto">
                 {translations[lang][1]} <span className="text-[#48487F]">{translations[lang][2]}</span> {translations[lang][3]}  <span className="text-[#48487F]">{translations[lang][4]}</span>
             </h2>
-            <p className="mt-6 max-w-[32rem] font-normal text-base leading-8 text-[#808080] text-center mx-auto">
+            <p className="mt-6 max-w-[32rem] font-normal text-base leading-8 text-[#808080] text-left md:text-center mx-auto">
                 {translations[lang][5]}
             </p>
-            <div className="mt-[3.5rem] flex gap-8">
-                <div className="flex flex-wrap gap-8">
+            <div className="mt-[3.5rem] flex flex-col lg:flex-row gap-[2.5rem] lg:gap-4 xl:gap-8">
+                <div className="flex flex-col md:flex-row md:flex-wrap gap-4 xl:gap-8">
                     {services[lang].map(service => <ServiceCard key={service.title} {...service} lang={lang} setOpenQuote={setOpenQuote} />)}
                 </div>
                 <div className="">
-                    <img src={roof} className="w-[80%] h-full object-cover rounded-xl" alt="" />
+                    <img src={roof} className="w-[100%] lg:w-[93%] h-full object-cover rounded-xl" alt="" />
                 </div>
             </div>
 

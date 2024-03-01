@@ -20,8 +20,8 @@ const values = {
 
 const Index = ({ lang }) => {
     return (
-        <section id="about" className="px-[7.5rem] py-[6rem] bg-[#F7F7FF]">
-            <div className="flex px-[7rem] xl:px-[10rem] justify-between mb-[5rem] lg:gap-8 xl:gap-12">
+        <section id="about" className="px-4 lg:px-[5rem] xl:px-[7.5rem] py-[6rem] bg-[#F7F7FF]">
+            <div className="flex flex-col lg:flex-row px-0 md:px-[4rem] lg:px-[7rem] xl:px-[10rem] justify-between mb-[5rem] gap-[2.5rem] lg:gap-7 xl:gap-12">
                 <div className="flex-1">
 
                     <h4 className="font-semibold text-sm leading-4 text-[#48487F]">
@@ -30,19 +30,19 @@ const Index = ({ lang }) => {
                     <h3 className="mt-3 max-w-[30rem] font-semibold text-[2.5rem] leading-[3rem] text-[#0E0E1A]">
                         {translations[lang][1]} <span className="text-[#48487F]">{translations[lang][2]}</span> {translations[lang][3]}
                     </h3>
-                    <p className="mt-6 max-w-[30rem] font-normal text-base leading-8 text-[#666666]">
+                    <p className="mt-6 lg:max-w-[30rem] font-normal text-base leading-8 text-[#666666]">
                         {translations[lang][4]}
                     </p>
                 </div>
                 <div className="flex-1"><img src={engineerRepair} className="h-full w-full object-cover rounded-xl aspect-[80/91]" alt="" /></div>
             </div>
-            <div className="mt-12 px-[7rem] mb-[5rem]">
-                <div className="mt-4 flex gap-[5rem]">
+            <div className="mt-12 md:px-[4rem] lg:px-[5rem] xl:px-[7.5rem] mb-[5rem]">
+                <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:justify-around lg:gap-[4rem] xl:gap-[5rem]">
                     <div className="p-3 flex items-center gap-3 w-fit rounded-3xl bg-[#FFFFFF] shadow-[-16px_16px_32px_0px_#00000014]">
                         <div className="w-6 h-6 rounded-full bg-[#E8E8FA] flex items-center justify-center">
                             <img src={tick} alt="" />
                         </div>
-                        <p className="text-sm leading-4 font-normal text-[#2F2F34]">{translations[lang][5]}</p>
+                        <p className="text-sm leading-4 font-normal text-[#2F2F34] text-nowrap">{translations[lang][5]}</p>
                     </div>
                     <div className="p-3 flex items-center gap-3 w-fit rounded-3xl bg-[#FFFFFF] shadow-[-16px_16px_32px_0px_#00000014]">
                         <div className="w-6 h-6 rounded-full bg-[#E8E8FA] flex items-center justify-center">
@@ -59,14 +59,14 @@ const Index = ({ lang }) => {
 
                 </div>
             </div>
-            <div className="border-t border-solid border-[#E6E6F5] pt-[5rem]">
-                <div className="flex gap-[6rem]">
-                    <div className="basis-2/5">
+            <div className="border-t border-solid border-[#E6E6F5] pt-[5rem] md:px-6 lg:px-0">
+                <div className="flex flex-col lg:flex-row gap-8 xl:gap-[6rem]">
+                    <div className="hidden lg:block basis-2/5">
                         <img src={valuesImage} className="h-full w-full object-cover rounded-xl" alt="" />
                     </div>
                     <div className="basis-3/5">
                         <h4 className="font-semibold text-sm leading-4 text-[#48487F]">{translations[lang][8]}</h4>
-                        <div className="flex flex-wrap gap-6 mt-8">
+                        <div className="flex flex-col md:flex-row flex-wrap gap-4 xl:gap-6 mt-8">
                             {
                                 values[lang].map(({ title, desc }) => {
                                     return (
@@ -84,6 +84,9 @@ const Index = ({ lang }) => {
 
 
                         </div>
+                    </div>
+                    <div className="lg:hidden">
+                        <img src={valuesImage} className="h-full w-full object-cover rounded-xl" alt="" />
                     </div>
                 </div>
             </div>
