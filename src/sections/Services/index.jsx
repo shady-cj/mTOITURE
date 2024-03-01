@@ -18,7 +18,7 @@ const services = {
 }
 const Index = ({ setOpenQuote, lang }) => {
     return (
-        <section id="services" className="px-4 md:px-6 lg:px-[5rem] xl:px-[7.5rem] py-[6rem]">
+        <section id="services" className="px-4 md:px-6 lg:px-[5rem] xl:px-[7.5rem] py-[3rem] md:py-[6rem]">
             <h4 className="font-semibold text-sm leading-4 text-[#48487F] text-left md:text-center">
                 {translations[lang][0]}
             </h4>

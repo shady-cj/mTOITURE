@@ -20,7 +20,7 @@ const values = {
 
 const Index = ({ lang }) => {
     return (
-        <section id="about" className="px-4 lg:px-[5rem] xl:px-[7.5rem] py-[6rem] bg-[#F7F7FF]">
+        <section id="about" className="px-4 lg:px-[5rem] xl:px-[7.5rem] py-[3rem] md:py-[6rem] bg-[#F7F7FF]">
             <div className="flex flex-col lg:flex-row px-0 md:px-[4rem] lg:px-[7rem] xl:px-[10rem] justify-between mb-[5rem] gap-[2.5rem] lg:gap-7 xl:gap-12">
                 <div className="flex-1">
 

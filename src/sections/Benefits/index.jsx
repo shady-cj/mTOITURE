@@ -22,7 +22,7 @@ const benefits = {
 }
 const Index = ({ setOpenQuote, lang }) => {
     return (
-        <section className="px-4 md:px-6 py-[6rem] lg:px-[5rem] xl:px-[7.5rem] bg-[#F7F7FF]">
+        <section className="px-4 md:px-6 py-[3rem] md:py-[6rem] lg:px-[5rem] xl:px-[7.5rem] bg-[#F7F7FF]">
             <div className="text-center">
                 <h2 className="font-semibold text-[2rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-[#48487F]">{translations[lang][0]} <span className="text-[#0E0E1A]">{translations[lang][1]}</span> {translations[lang][2]}</h2>
                 <p className="pt-2 font-normal text-sm leading-6 md:text-base md:leading-8 text-[#666666] max-w-[22rem] mx-auto">{translations[lang][3]}</p>

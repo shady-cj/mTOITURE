@@ -5,7 +5,7 @@ import fb from "../../assets/fb-gray.svg"
 import translations from '../../translation/footerTranslation';
 const Index = ({ setOpenQuote, lang }) => {
     return (
-        <section className='xs:px-4 xs:pt-[4.5rem] lg:px-[5rem] xl:px-[7.5rem] lg:pt-[6rem] pb-6 bg-[#0E0E1A]' id="contact">
+        <section className='px-4 pt-[4.5rem] lg:px-[5rem] xl:px-[7.5rem] lg:pt-[6rem] pb-6 bg-[#0E0E1A]' id="contact">
             <h2 className='text-[#C8C8DB] mt-3 font-semibold text-[2rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] max-w-[28rem] mx-auto text-center'>
                 {translations[lang][0]}
             </h2>

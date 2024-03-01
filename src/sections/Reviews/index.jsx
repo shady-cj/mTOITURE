@@ -43,7 +43,7 @@ const reviews = {
 }
 const Index = ({ lang }) => {
     return (
-        <section className="relative px-4 z-0 lg:px-[5rem] xl:px-[7.5rem] py-[6rem] bg-[#F7F7FF]" id="reviews">
+        <section className="relative px-4 z-0 lg:px-[5rem] xl:px-[7.5rem] py-[3rem] md:py-[6rem] bg-[#F7F7FF]" id="reviews">
             <img src={bigStar} className="absolute right-[126px] top-[209px]" alt="" />
             <img src={bigStar} className="absolute left-[136px] top-[402px]" alt="" />
             <h4 className='font-semibold text-sm leading-4 text-center text-[#48487F]'>

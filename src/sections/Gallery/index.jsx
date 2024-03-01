@@ -9,7 +9,7 @@ import project8 from "../../assets/project-8.jpg"
 import translations from "../../translation/galleryTranslation"
 const Index = ({ lang }) => {
     return (
-        <section className="px-4 lg:px-[5rem] xl:px-[7.5rem] py-[6rem]" id="gallery">
+        <section className="px-4 lg:px-[5rem] xl:px-[7.5rem] py-[3rem] md:py-[6rem]" id="gallery">
             <h4 className='font-semibold text-sm leading-4 text-center text-[#48487F]'>
                 {translations[lang][0]}
             </h4>
