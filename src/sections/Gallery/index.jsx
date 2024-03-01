@@ -16,13 +16,13 @@ const Index = ({ lang }) => {
             <h2 className='text-[#0E0E1A] mt-3 font-semibold text-[2.5rem] leading-[3rem] max-w-[25rem] mx-auto text-center'>
                 {translations[lang][1]} <span className='text-[#48487F]'>{translations[lang][2]}</span> {translations[lang][3]}
             </h2>
-            <div className="mt-[5.6rem] flex flex-col gap-3.5">
+            <div className="mt-[5.6rem] hidden md:flex flex-col gap-3.5">
                 <div className="gap-3.5 flex max-h-[36rem]">
 
                     <div className="flex-1">
                         <img className="h-full w-full rounded-lg" src={project1} alt="" />
                     </div>
-                    <div className="flex-1 flex flex-row md:flex-col gap-3.5 ">
+                    <div className="flex-1 flex flex-col gap-3.5 ">
                         <div className="flex-1 flex gap-3.5">
 
                             <div className="flex-1">
@@ -42,7 +42,7 @@ const Index = ({ lang }) => {
 
                 </div>
                 <div className="gap-3.5 flex max-h-[36rem]">
-                    <div className="flex-1 flex flex-row md:flex-col gap-3.5">
+                    <div className="flex-1 flex flex-col gap-3.5">
 
                         <div className="flex-1 flex gap-3.5">
 
@@ -65,6 +65,20 @@ const Index = ({ lang }) => {
                         <img className="h-full w-full rounded-lg" src={project5} alt="" />
                     </div>
 
+                </div>
+            </div>
+            <div className="mt-[5.6rem] flex flex-col md:hidden gap-3.5">
+                <div className="gap-3.5 flex max-h-[15rem] overflow-x-scroll">
+                    <img className=" w-[95%] object-cover rounded-lg" src={project1} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg" src={project2} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg" src={project3} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg" src={project4} alt="" />
+                </div>
+                <div className="gap-3.5 flex max-h-[15rem] overflow-x-scroll">
+                    <img className=" w-[95%] object-cover rounded-lg" src={project5} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg" src={project6} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg" src={project7} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg" src={project8} alt="" />
                 </div>
 
             </div>
