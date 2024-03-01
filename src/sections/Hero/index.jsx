@@ -105,12 +105,12 @@ const Index = ({ setOpenQuote, lang }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="fixed translate-x-[-5%] translate-y-[-50%] md:translate-x-[50%] lg:translate-x-0 md:translate-y-[30%] flex gap-6 align-center bg-[#DDECF0] border border-solid border-[#A7D4E0] py-4 px-6 rounded-[26px] bottom-8 z-10 shadow-[-24px_-24px_48px_0px_#0000001F,24px_24px_48px_0px_#0000001F]">
+                    <div className="fixed translate-x-[-5%] translate-y-[-50%] md:translate-x-[50%] lg:translate-x-0 md:translate-y-[30%] flex gap-6 items-center bg-[#DDECF0] border border-solid border-[#A7D4E0] py-4 px-6 rounded-[26px] bottom-8 z-10 shadow-[-24px_-24px_48px_0px_#0000001F,24px_24px_48px_0px_#0000001F]">
                         <div className="">
-                            <img src={fbHero} className="w-4 md:w-5" alt="" />
+                            <img src={fbHero} className="" alt="" />
                         </div>
                         <div className="h-full px-6 border-x border-solid border-[#A7D4E0] flex align-center justify-center gap-[5px]">
-                            <img src={phoneHero} alt="" className="w-4 md:w-5" />
+                            <img src={phoneHero} alt="" className="" />
                             <span className="font-normal text-sm md:text-base leading-5 text-[#67676A] text-nowrap">
                                 (514) 668-6401
                             </span>
