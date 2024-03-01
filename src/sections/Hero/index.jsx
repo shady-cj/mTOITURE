@@ -18,7 +18,7 @@ const Index = ({ setOpenQuote, lang }) => {
                         <p className="w-fit mx-auto lg:mx-0 bg-[#EDEDFC] rounded-2xl border-[0.5px] border-solid border-[#9FC3CC] px-2 py-[3px] font-medium text-xs md:text-sm leading-4 text-[#48487F]">
                             {translations[lang][0]}
                         </p>
-                        <h2 className="mt-3 mx-auto px-2 sm:px-6 lg:px-0 lg:mx-0 font-semibold text-[#0E0E1A] text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] text-center lg:text-left leading-[3rem] md:leading-[4.2rem] max-w-[40rem]">
+                        <h2 className="mt-3 mx-auto px-2 sm:px-6 lg:px-0 lg:mx-0 font-semibold text-[#0E0E1A] text-[2.2rem] sm:text-[3rem] md:text-[3.5rem] text-center lg:text-left leading-[3rem] md:leading-[4.2rem] max-w-[40rem]">
                             {translations[lang][1]} <span className="rounded-2xl leading-4 text-nowrap border px-2 py-0.5 bg-[#DDECF0] border-[#A7D4E0] border-solid text-[#48487F]">{translations[lang][2]}</span> {translations[lang][3]}
                         </h2>
                         <p className="font-normal text-center lg:text-left mx-auto lg:mx-0 text-sm md:text-base md:leading-7 mt-6 text-[#232324] max-w-[24rem] lg:max-w-[30rem]">
