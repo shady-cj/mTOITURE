@@ -67,18 +67,18 @@ const Index = ({ lang }) => {
 
                 </div>
             </div>
-            <div className="mt-[5.6rem] flex flex-col md:hidden gap-3.5">
-                <div className="gap-3.5 flex max-h-[15rem] overflow-x-scroll">
-                    <img className=" w-[95%] object-cover rounded-lg" src={project1} alt="" />
-                    <img className=" w-[95%] object-cover rounded-lg" src={project2} alt="" />
-                    <img className=" w-[95%] object-cover rounded-lg" src={project3} alt="" />
-                    <img className=" w-[95%] object-cover rounded-lg" src={project4} alt="" />
+            <div className="mt-[2.5rem] flex flex-col md:hidden gap-3.5">
+                <div className="gap-3.5 flex max-h-[15rem] overflow-x-scroll snap-x snap-mandatory">
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project1} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project2} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project3} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project4} alt="" />
                 </div>
-                <div className="gap-3.5 flex max-h-[15rem] overflow-x-scroll">
-                    <img className=" w-[95%] object-cover rounded-lg" src={project5} alt="" />
-                    <img className=" w-[95%] object-cover rounded-lg" src={project6} alt="" />
-                    <img className=" w-[95%] object-cover rounded-lg" src={project7} alt="" />
-                    <img className=" w-[95%] object-cover rounded-lg" src={project8} alt="" />
+                <div className="gap-3.5 flex max-h-[15rem] overflow-x-scroll snap-x snap-mandatory">
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project5} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project6} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project7} alt="" />
+                    <img className=" w-[95%] object-cover rounded-lg snap-start" src={project8} alt="" />
                 </div>
 
             </div>
