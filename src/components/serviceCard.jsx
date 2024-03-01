@@ -10,7 +10,7 @@ const ServiceCard = ({ title, content, setOpenQuote, lang }) => {
                         <h2 className="font-medium text-base leading-5 text-[#0E0E1A]">{title}</h2>
                     </div>
 
-                    <p className="pt-2 pl-[18px] font-normal text-base leading-7 text-[#666666]">
+                    <p className="pt-2 pl-[18px] font-normal text-sm leading-6 md:text-base md:leading-7 text-[#666666]">
                         {content}
                     </p>
                 </div>

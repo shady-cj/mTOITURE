@@ -43,13 +43,13 @@ const reviews = {
 }
 const Index = ({ lang }) => {
     return (
-        <section className="relative z-0 lg:px-[5rem] xl:px-[7.5rem] py-[6rem] bg-[#F7F7FF]" id="reviews">
+        <section className="relative px-4 z-0 lg:px-[5rem] xl:px-[7.5rem] py-[6rem] bg-[#F7F7FF]" id="reviews">
             <img src={bigStar} className="absolute right-[126px] top-[209px]" alt="" />
             <img src={bigStar} className="absolute left-[136px] top-[402px]" alt="" />
             <h4 className='font-semibold text-sm leading-4 text-center text-[#48487F]'>
                 {translations[lang][0]}
             </h4>
-            <h2 className='text-[#0E0E1A] mt-3 font-semibold text-[2.5rem] leading-[3rem] max-w-[32.4rem] mx-auto text-center'>
+            <h2 className='text-[#0E0E1A] mt-3 font-semibold text-[2rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] max-w-[32.4rem] mx-auto text-center'>
                 {translations[lang][1]} <span className='text-[#48487F]'>{translations[lang][2]}</span>
             </h2>
             <div className="mt-[3.5rem] flex flex-col gap-6 items-center">

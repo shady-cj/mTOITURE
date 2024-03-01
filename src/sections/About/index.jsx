@@ -27,10 +27,10 @@ const Index = ({ lang }) => {
                     <h4 className="font-semibold text-sm leading-4 text-[#48487F]">
                         {translations[lang][0]}
                     </h4>
-                    <h3 className="mt-3 max-w-[30rem] font-semibold text-[2.5rem] leading-[3rem] text-[#0E0E1A]">
+                    <h3 className="mt-3 max-w-[30rem] font-semibold text-[2rem] leading-[2.5rem] md:text-[2.5rem] md:leading-[3rem] text-[#0E0E1A]">
                         {translations[lang][1]} <span className="text-[#48487F]">{translations[lang][2]}</span> {translations[lang][3]}
                     </h3>
-                    <p className="mt-6 lg:max-w-[30rem] font-normal text-base leading-8 text-[#666666]">
+                    <p className="mt-6 lg:max-w-[30rem] font-normal text-sm leading-6 md:text-base md:leading-8 text-[#666666]">
                         {translations[lang][4]}
                     </p>
                 </div>

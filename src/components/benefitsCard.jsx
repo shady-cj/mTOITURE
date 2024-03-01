@@ -6,7 +6,7 @@ const BenefitsCard = ({ title, content }) => {
                 <img src={tick} alt="" />
             </div>
             <h4 className="mt-6 font-medium text-base leading-5 text-[#48487F]">{title}</h4>
-            <p className="mt-4 font-normal text-base leading-7 text-[#666666]">{content}</p>
+            <p className="mt-4 font-normal text-sm leading-6 md:text-base md:leading-7 text-[#666666]">{content}</p>
         </div>
     )
 }
