@@ -6,10 +6,26 @@ import React from "react"
 import { motion } from "framer-motion"
 const Index = ({ setOpenQuote, lang }) => {
     const [openMenu, setOpenMenu] = React.useState(false);
+    const [onMobile, setOnMobile] = React.useState(() => window.innerWidth > 768 ? false : true)
+
+    React.useEffect(() => {
+        const closeMenu = () => {
+            if (window.innerWidth > 768) {
+                setOpenMenu(false)
+                setOnMobile(false)
+            } else {
+                setOnMobile(true)
+            }
+        }
+        window.addEventListener("resize", closeMenu)
+        return () => {
+            window.removeEventListener("resize", closeMenu)
+        }
+    }, [])
 
     return (
         <div className="absolute md:fixed md:z-10 max-w-[inherit] top-[2.5rem] w-[inherit] px-4 lg:px-[5rem] xl:px-[7.5rem]" >
-            <motion.header initial={{ height: "4rem" }} animate={openMenu ? { height: "32.8375rem" } : { height: "4rem" }} transition={{ type: "spring", ease: "ease-in-out" }} className='relative w-[80vw] bg-[#0E0E1A] w-full rounded-[2rem] py-5 md:py-2 pr-3 pl-6 overflow-hidden'>
+            <motion.header initial={{ height: `${onMobile ? "4rem" : "3.5rem"}` }} animate={openMenu ? { height: "32.8375rem" } : { height: `${onMobile ? "4rem" : "3.5rem"}` }} transition={{ type: "spring", ease: "ease-in-out" }} className='relative w-[80vw] bg-[#0E0E1A] w-full rounded-[2rem] py-5 md:py-2 pr-3 pl-6 overflow-hidden h-[3.5rem]'>
                 <div className="flex justify-between items-center">
 
                     <div className="text-sm font-semibold leading-4 text-[#F3F3FB]">
@@ -33,11 +49,11 @@ const Index = ({ setOpenQuote, lang }) => {
                 </div>
                 <div className={`block md:hidden overflow-hidden`}>
                     <nav className="flex flex-col items-center z-10 md:hidden bg-[#11111F] border border-solid border-[#15151F] p-4 mt-6 rounded-xl gap-[2.5rem]">
-                        <a href="#about" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px] mt-2">{translations[lang][0]}</a>
-                        <a href="#gallery" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][1]}</a>
-                        <a href="#services" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][2]}</a>
-                        <a href="#reviews" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][3]}</a>
-                        <a href="#contact" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][4]}</a>
+                        <a onClick={() => setOpenMenu(false)} href="#about" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px] mt-2">{translations[lang][0]}</a>
+                        <a onClick={() => setOpenMenu(false)} href="#gallery" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][1]}</a>
+                        <a onClick={() => setOpenMenu(false)} href="#services" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][2]}</a>
+                        <a onClick={() => setOpenMenu(false)} href="#reviews" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][3]}</a>
+                        <a onClick={() => setOpenMenu(false)} href="#contact" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][4]}</a>
                         <div className="w-full border border-solid border-[#1F1F29] mt-4"></div>
                         <a onClick={() => setOpenQuote(true)} className=" rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-base text-[#48487F] font-[Inter] flex items-center gap-1 w-fit mx-auto">{translations[lang][5]}<img src={arrowLeft} alt="" /></a>
                     </nav>
