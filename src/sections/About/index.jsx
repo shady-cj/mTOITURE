@@ -59,7 +59,7 @@ const Index = ({ lang }) => {
 
                 </div>
             </div>
-            <div className="border-t border-solid border-[#E6E6F5] pt-[5rem] md:px-6 lg:px-0">
+            <div className="border-t border-solid border-[#E6E6F5] pt-[2.5rem] md:pt-[5rem] md:px-6 lg:px-0">
                 <div className="flex flex-col lg:flex-row gap-8 xl:gap-[6rem]">
                     <div className="hidden lg:block basis-2/5">
                         <img src={valuesImage} className="h-full w-full object-cover rounded-xl" alt="" />
