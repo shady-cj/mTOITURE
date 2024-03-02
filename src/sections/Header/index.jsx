@@ -6,11 +6,11 @@ import React from "react"
 import { motion } from "framer-motion"
 const Index = ({ setOpenQuote, lang }) => {
     const [openMenu, setOpenMenu] = React.useState(false);
-    const [onMobile, setOnMobile] = React.useState(() => window.innerWidth > 768 ? false : true)
+    const [onMobile, setOnMobile] = React.useState(() => window.innerWidth >= 768 ? false : true)
 
     React.useEffect(() => {
         const closeMenu = () => {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth >= 768) {
                 setOpenMenu(false)
                 setOnMobile(false)
             } else {
