@@ -26,7 +26,7 @@ const Index = ({ setOpenQuote, lang }) => {
                         </p>
                         <div className="mt-12 flex justify-center lg:justify-start gap-4">
                             <a className="rounded-[1.75rem] px-4 py-3 bg-[#48487F] font-medium text-sm md:text-base text-[#F2F2FC] text-nowrap font-[Inter] flex items-center gap-1" onClick={() => setOpenQuote(true)}>{translations[lang][5]} <img src={arrowLeftWhite} alt="" /></a>
-                            <a className="rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-sm md:text-base text-[#48487F] text-nowrap font-[Inter] border-[0.5px] border-solid border-[#8C8CB8]">{translations[lang][6]}</a>
+                            <a href="tel:(514) 668-6401" className="rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-sm md:text-base text-[#48487F] text-nowrap font-[Inter] border-[0.5px] border-solid border-[#8C8CB8]">{translations[lang][6]}</a>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ const Index = ({ setOpenQuote, lang }) => {
 
                             </div>
                         </div>
-                        <div className="bg-[#EBEBF5] p-4 flex items-center gap-4 border border-solid border-[#B3DBE5] rounded-lg">
+                        <div onClick={() => location.href = "https://www.facebook.com/105339484305011/posts/188345969337695/?mibextid=rS40aB7S9Ucbxw6v"} className="cursor-pointer bg-[#EBEBF5] p-4 flex items-center gap-4 border border-solid border-[#B3DBE5] rounded-lg">
                             <img src={facebook} alt="" />
                             <div>
                                 <div className="flex">
@@ -87,7 +87,7 @@ const Index = ({ setOpenQuote, lang }) => {
 
                             </div>
                         </div>
-                        <div className="bg-[#EBEBF5] p-4 flex flex-col md:flex-row items-start md:items-center gap-4 border border-solid border-[#B3DBE5] rounded-lg">
+                        <div onClick={() => location.href = "https://www.facebook.com/105339484305011/posts/188345969337695/?mibextid=rS40aB7S9Ucbxw6v"} className="bg-[#EBEBF5] p-4 flex flex-col md:flex-row items-start md:items-center gap-4 border border-solid border-[#B3DBE5] rounded-lg">
                             <img src={facebook} alt="" />
                             <div>
                                 <div className="flex">
@@ -107,13 +107,13 @@ const Index = ({ setOpenQuote, lang }) => {
                     </div>
                     <div className="fixed translate-x-[-5%] translate-y-[-50%] md:translate-x-[50%] lg:translate-x-0 md:translate-y-[30%] hidden md:flex gap-6 items-center bg-[#DDECF0] border border-solid border-[#A7D4E0] py-4 px-6 rounded-[26px] bottom-8 z-10 shadow-[-24px_-24px_48px_0px_#0000001F,24px_24px_48px_0px_#0000001F]">
                         <div className="">
-                            <img src={fbHero} className="w-[2rem] md:w-auto" alt="" />
+                            <img src={fbHero} onClick={() => location.href = "https://www.facebook.com/105339484305011/posts/188345969337695/?mibextid=rS40aB7S9Ucbxw6v"} className="w-[2rem] md:w-auto" alt="" />
                         </div>
                         <div className="h-full px-6 border-x border-solid border-[#A7D4E0] flex align-center justify-center gap-[5px]">
                             <img src={phoneHero} alt="" className="" />
-                            <span className="font-normal text-sm md:text-base leading-5 text-[#67676A] text-nowrap">
+                            <a href="tel:(514) 668-6401" className="font-normal text-sm md:text-base leading-5 text-[#67676A] text-nowrap">
                                 (514) 668-6401
-                            </span>
+                            </a>
                         </div>
                         <div className="text-[#48487F] font-semibold text-sm md:text-base leading-5 text-nowrap">
                             RBQ # 5774-7594-01

@@ -21,10 +21,10 @@ const Index = ({ setOpenQuote, lang }) => {
                 </div>
                 <div>
                     <p className='text-[#9D9DA3] font-medium text-sm leading-4 text-center lg:text-left'>{translations[lang][3]}</p>
-                    <p className='mt-6 font-normal text-base leading-5 text-[#BDBDC3] flex gap-[5px] text-center lg:text-left'>
+                    <a href="tel:(514) 668-6401" className='mt-6 font-normal text-base leading-5 text-[#BDBDC3] flex gap-[5px] text-center lg:text-left'>
                         <img src={phone} className='w-5 h-5' /> (514) 668-6401
-                    </p>
-                    <img src={fb} className='mt-6 mx-auto lg:mx-0' alt="" />
+                    </a>
+                    <img src={fb} onClick={() => location.href = "https://www.facebook.com/105339484305011/posts/188345969337695/?mibextid=rS40aB7S9Ucbxw6v"} className='cursor-pointer mt-6 mx-auto lg:mx-0' alt="" />
                 </div>
                 <div>
                     <p className='font-medium text-sm leading-4 text-[#9D9DA3] text-center lg:text-left'>{translations[lang][4]}</p>

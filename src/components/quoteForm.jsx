@@ -1,31 +1,56 @@
 import arrowLeftWhite from "../assets/arrow-left-white.svg";
 import translations from "../translation/quoteFormTranslation";
+import React from "react";
+
 const QuoteForm = ({ setOpenQuote, lang }) => {
+    const [mailBody, setMailBody] = React.useState("")
+    const [info, setInfo] = React.useState({
+        "fullName": "",
+        "email": "",
+        "phone": ""
+    })
+
+    const handleChange = (e) => {
+        setInfo({ ...info, [e.target.name]: e.target.value })
+    }
+    const formEl = React.useRef(null);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const body = `
+Full Name: ${info.fullName},
+Email: ${info.email},
+Phone: ${info.phone}
+        `
+        setMailBody(body)
+        formEl.current.submit()
+    }
     return (
         <section onClick={() => setOpenQuote(false)} className="fixed flex justify-center items-center z-20 max-w-[inherit] top-0 bottom-0 w-[inherit] bg-[#00000050]">
 
-            <form onClick={(e) => e.stopPropagation()} className="py-8 px-5 bg-[#FFFFFF] rounded-lg h-fit w-[25rem]">
+            <form onSubmit={handleSubmit} ref={formEl} onClick={(e) => e.stopPropagation()} className="py-8 px-5 bg-[#FFFFFF] rounded-lg h-fit w-[25rem]" action="mailto:pmcintyre@mtoiture.com" method="POST" encType="text/plain">
                 <h2 className="font-medium text-2xl leading-7 text-[#333333] ">
                     {translations[lang][0]}
                 </h2>
+                <input type="hidden" name="subject" value="I want to get a free quote" />
+                <input type="hidden" name="body" value={mailBody} />
                 <section className="mt-8">
                     <div>
                         <label htmlFor="full-name" className="block font-medium text-base leading-4 text-[#4D4D4D]">
                             {translations[lang][1]}
                         </label>
-                        <input className="w-full block mt-2 px-4 py-[10px] rounded-[4px] border border-solid border-[#E6E6E6] font-normal text-base leading-4 text-[#999999]" type="text" id="full-name" placeholder={translations[lang][2]} />
+                        <input name="fullName" type='text' onChange={handleChange} className="w-full block mt-2 px-4 py-[10px] rounded-[4px] border border-solid border-[#E6E6E6] font-normal text-base leading-4 text-[#999999]" id="full-name" placeholder={translations[lang][2]} />
                     </div>
                     <div className="mt-6">
                         <label htmlFor="phone" className="block font-medium text-base leading-4 text-[#4D4D4D]">
                             {translations[lang][3]}
                         </label>
-                        <input className="w-full block mt-2 px-4 py-[10px] rounded-[4px] border border-solid border-[#E6E6E6] font-normal text-base leading-4 text-[#999999]" type="text" id="phone" placeholder={translations[lang][4]} />
+                        <input name="phone" type="tel" onChange={handleChange} className="w-full block mt-2 px-4 py-[10px] rounded-[4px] border border-solid border-[#E6E6E6] font-normal text-base leading-4 text-[#999999]" id="phone" placeholder={translations[lang][4]} />
                     </div>
                     <div className="mt-6">
                         <label htmlFor="email" className="block font-medium text-base leading-4 text-[#4D4D4D]">
                             {translations[lang][5]}
                         </label>
-                        <input className="w-full block mt-2 px-4 py-[10px] rounded-[4px] border border-solid border-[#E6E6E6] font-normal text-base leading-4 text-[#999999]" type="text" id="email" placeholder={translations[lang][6]} />
+                        <input name="email" type='email' onChange={handleChange} className="w-full block mt-2 px-4 py-[10px] rounded-[4px] border border-solid border-[#E6E6E6] font-normal text-base leading-4 text-[#999999]" id="email" placeholder={translations[lang][6]} />
                     </div>
                 </section>
                 <section className="mt-4 flex gap-2 items-start">
