@@ -16,11 +16,7 @@ const QuoteForm = ({ setOpenQuote, lang }) => {
     const formEl = React.useRef(null);
     const handleSubmit = (e) => {
         e.preventDefault();
-        const body = `
-Full Name: ${info.fullName},
-Email: ${info.email},
-Phone: ${info.phone}
-        `
+        const body = `Full Name: ${info.fullName}<br/>Email: ${info.email}<br/>Phone: ${info.phone}`
         setMailBody(encodeURI(body))
         formEl.current.submit()
     }
@@ -31,7 +27,7 @@ Phone: ${info.phone}
                 <h2 className="font-medium text-2xl leading-7 text-[#333333] ">
                     {translations[lang][0]}
                 </h2>
-                <input type="hidden" name="subject" value={encodeURI("I want to get a free quote")} />
+                <input type="hidden" name="subject" value={"I&nbsp;want&nbsp;to&nbsp;get&nbsp;a&nbsp;free&nbsp;quote"} />
                 <input type="hidden" name="body" value={mailBody} />
                 <section className="mt-8">
                     <div>
