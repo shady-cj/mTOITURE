@@ -31,7 +31,7 @@ const Index = ({ setOpenQuote, lang }) => {
                     <div className="text-sm font-semibold leading-4 text-[#F3F3FB]">
                         mTOITURE
                     </div>
-                    <div className="flex md:hidden text-[15px] gap-2 mr-4 leading-5 font-normal text-[#C4C4CC]" onClick={() => setOpenMenu(prev => !prev)}>
+                    <div className="flex md:hidden text-[15px] gap-2 mr-4 leading-5 font-normal text-[#C4C4CC] items-center" onClick={() => setOpenMenu(prev => !prev)}>
                         <img src={menu} alt="" />
                         Menu
                     </div>
@@ -55,7 +55,11 @@ const Index = ({ setOpenQuote, lang }) => {
                         <a onClick={() => setOpenMenu(false)} href="#reviews" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][3]}</a>
                         <a onClick={() => setOpenMenu(false)} href="#contact" className="text-[#C4C4CC] font-normal leading-[18.15px] text-[15px]">{translations[lang][4]}</a>
                         <div className="w-full border border-solid border-[#1F1F29] mt-4"></div>
-                        <a onClick={() => setOpenQuote(true)} className=" rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-base text-[#48487F] font-[Inter] flex items-center gap-1 w-fit mx-auto">{translations[lang][5]}<img src={arrowLeft} alt="" /></a>
+                        <a onClick={() => {
+                            setOpenQuote(true)
+                            setOpenMenu(false)
+                        }
+                        } className=" rounded-[1.75rem] px-4 py-3 bg-[#F7F7FC] font-medium text-base text-[#48487F] font-[Inter] flex items-center gap-1 w-fit mx-auto">{translations[lang][5]}<img src={arrowLeft} alt="" /></a>
                     </nav>
                 </div>
 
