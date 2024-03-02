@@ -3,7 +3,6 @@ import translations from "../translation/quoteFormTranslation";
 import React from "react";
 
 const QuoteForm = ({ setOpenQuote, lang }) => {
-    const [mailBody, setMailBody] = React.useState("")
     const [info, setInfo] = React.useState({
         "fullName": "",
         "email": "",
@@ -13,22 +12,21 @@ const QuoteForm = ({ setOpenQuote, lang }) => {
     const handleChange = (e) => {
         setInfo({ ...info, [e.target.name]: e.target.value })
     }
-    const formEl = React.useRef(null);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        const body = `Full Name: ${info.fullName}<br/>Email: ${info.email}<br/>Phone: ${info.phone}`
-        setMailBody(encodeURI(body))
-        formEl.current.submit()
+        const body = `Full Name: ${info.fullName}
+Email: ${info.email}
+Phone: ${info.phone}`
+        location.href = `mailto:pmcintyre@mtoiture.com?subject=${encodeURIComponent("FREE QUOTE")}&body=${encodeURIComponent(body)}`
     }
     return (
         <section onClick={() => setOpenQuote(false)} className="fixed flex justify-center items-center z-20 max-w-[inherit] top-0 bottom-0 w-[inherit] bg-[#00000050]">
 
-            <form onSubmit={handleSubmit} ref={formEl} onClick={(e) => e.stopPropagation()} className="py-8 px-5 bg-[#FFFFFF] rounded-lg h-fit w-[25rem]" action="mailto:pmcintyre@mtoiture.com" encType="text/plain">
+            <form onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()} className="py-8 px-5 bg-[#FFFFFF] rounded-lg h-fit w-[25rem]" action="" encType="text/plain">
                 <h2 className="font-medium text-2xl leading-7 text-[#333333] ">
                     {translations[lang][0]}
                 </h2>
-                <input type="hidden" name="subject" value={"I&nbsp;want&nbsp;to&nbsp;get&nbsp;a&nbsp;free&nbsp;quote"} />
-                <input type="hidden" name="body" value={mailBody} />
                 <section className="mt-8">
                     <div>
                         <label htmlFor="full-name" className="block font-medium text-base leading-4 text-[#4D4D4D]">
