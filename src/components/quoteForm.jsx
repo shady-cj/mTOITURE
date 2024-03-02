@@ -8,6 +8,7 @@ const QuoteForm = ({ setOpenQuote, lang }) => {
         "email": "",
         "phone": ""
     })
+    const agreeRef = React.useRef(null)
 
     const handleChange = (e) => {
         setInfo({ ...info, [e.target.name]: e.target.value })
@@ -18,7 +19,9 @@ const QuoteForm = ({ setOpenQuote, lang }) => {
         const body = `Full Name: ${info.fullName}
 Email: ${info.email}
 Phone: ${info.phone}`
-        location.href = `mailto:pmcintyre@mtoiture.com?subject=${encodeURIComponent("FREE QUOTE")}&body=${encodeURIComponent(body)}`
+        if (agreeRef.current.checked)
+            location.href = `mailto:pmcintyre@mtoiture.com?subject=${encodeURIComponent("FREE QUOTE")}&body=${encodeURIComponent(body)}`
+        else alert("Agree to the terms and condition")
     }
     return (
         <section onClick={() => setOpenQuote(false)} className="fixed flex justify-center items-center z-20 max-w-[inherit] top-0 bottom-0 w-[inherit] bg-[#00000050]">
@@ -48,7 +51,7 @@ Phone: ${info.phone}`
                     </div>
                 </section>
                 <section className="mt-4 flex gap-2 items-start">
-                    <input type="checkbox" id="agree" className="mt-1" />
+                    <input ref={agreeRef} type="checkbox" id="agree" className="mt-1" />
                     <label htmlFor="agree" className="text-base leading-5 font-normal text-[#344054]">{translations[lang][7]} </label>
                 </section>
                 <section className="mt-8">
