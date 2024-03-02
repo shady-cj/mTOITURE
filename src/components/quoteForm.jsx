@@ -27,7 +27,7 @@ Phone: ${info.phone}
     return (
         <section onClick={() => setOpenQuote(false)} className="fixed flex justify-center items-center z-20 max-w-[inherit] top-0 bottom-0 w-[inherit] bg-[#00000050]">
 
-            <form onSubmit={handleSubmit} ref={formEl} onClick={(e) => e.stopPropagation()} className="py-8 px-5 bg-[#FFFFFF] rounded-lg h-fit w-[25rem]" action="mailto:pmcintyre@mtoiture.com" method="POST" encType="text/plain">
+            <form onSubmit={handleSubmit} ref={formEl} onClick={(e) => e.stopPropagation()} className="py-8 px-5 bg-[#FFFFFF] rounded-lg h-fit w-[25rem]" action="mailto:pmcintyre@mtoiture.com" encType="text/plain">
                 <h2 className="font-medium text-2xl leading-7 text-[#333333] ">
                     {translations[lang][0]}
                 </h2>
