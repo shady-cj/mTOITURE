@@ -21,7 +21,7 @@ Full Name: ${info.fullName},
 Email: ${info.email},
 Phone: ${info.phone}
         `
-        setMailBody(body)
+        setMailBody(encodeURI(body))
         formEl.current.submit()
     }
     return (
@@ -31,7 +31,7 @@ Phone: ${info.phone}
                 <h2 className="font-medium text-2xl leading-7 text-[#333333] ">
                     {translations[lang][0]}
                 </h2>
-                <input type="hidden" name="subject" value="I want to get a free quote" />
+                <input type="hidden" name="subject" value={encodeURI("I want to get a free quote")} />
                 <input type="hidden" name="body" value={mailBody} />
                 <section className="mt-8">
                     <div>
