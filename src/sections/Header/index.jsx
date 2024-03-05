@@ -24,7 +24,7 @@ const Index = ({ setOpenQuote, lang }) => {
     }, [])
 
     return (
-        <div className="absolute md:fixed md:z-10 max-w-[inherit] top-[2.5rem] w-[inherit] px-4 lg:px-[5rem] xl:px-[7.5rem]" >
+        <div className="absolute max-w-[inherit] top-[2.5rem] w-[inherit] px-4 lg:px-[5rem] xl:px-[7.5rem]" >
             <motion.header initial={{ height: `${onMobile ? "4rem" : "3.5rem"}` }} animate={openMenu ? { height: "32.8375rem" } : { height: `${onMobile ? "4rem" : "3.5rem"}` }} transition={{ type: "spring", ease: "ease-in-out" }} className='relative w-[80vw] bg-[#0E0E1A] w-full rounded-[2rem] py-5 md:py-2 pr-3 pl-6 overflow-hidden h-[3.5rem]'>
                 <div className="flex justify-between items-center">
 

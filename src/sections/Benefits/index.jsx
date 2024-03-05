@@ -1,6 +1,8 @@
 import BenefitsCard from "../../components/benefitsCard"
 import arrowLeftWhite from "../../assets/arrow-left-white.svg";
 import translations from "../../translation/benefitTranslation";
+import React from "react";
+import { useInView } from "framer-motion";
 // const benefits = [
 //     // { title: "Over 120 project completed ", content: "Since 2019, we have proudly served the greater Montreal area and completed project of all kinds" },
 //     // { title: "100% Customer Satisfication", content: "We go the extra mile to earn your trust, delivering exceptional service and exceeding expectations." },
@@ -21,6 +23,38 @@ const benefits = {
     ]
 }
 const Index = ({ setOpenQuote, lang }) => {
+    const frameRef = React.useRef(null);
+    const frameInView = useInView(frameRef, { once: true });
+    const [projectCompleted, setProjectCompleted] = React.useState(0)
+    const [projectPercent, setProjectPercent] = React.useState(0)
+    React.useEffect(() => {
+        let interval, interval2;
+        if (frameInView) {
+            interval = setInterval(() => {
+                setProjectCompleted(prev => {
+                    if (prev < 560) {
+                        return prev + 10
+                    }
+                    clearInterval(interval)
+                    return prev
+                })
+            }, 10)
+            interval2 = setInterval(() => {
+                setProjectPercent(prev => {
+                    if (prev < 100) {
+                        return prev + 10
+                    }
+                    clearInterval(interval2)
+                    return prev
+                })
+            }, 100)
+        }
+        return (() => {
+            if (interval) clearInterval(interval)
+
+            if (interval2) clearInterval(interval2)
+        })
+    }, [frameInView])
     return (
         <section className="px-4 md:px-6 py-[3rem] md:py-[6rem] lg:px-[5rem] xl:px-[7.5rem] bg-[#F7F7FF]">
             <div className="text-center">
@@ -28,28 +62,28 @@ const Index = ({ setOpenQuote, lang }) => {
                 <p className="pt-2 font-normal text-sm leading-6 md:text-base md:leading-8 text-[#666666] max-w-[22rem] mx-auto">{translations[lang][3]}</p>
             </div>
             <div className="flex flex-col lg:flex-row lg:gap-7 xl:gap-10 mt-12">
-                <div className="flex flex-col gap-4 basis-3/5">
+                <div className="flex flex-col gap-4 basis-3/5" ref={frameRef}>
                     <div className="flex flex-col md:flex-row gap-4">
                         <div className="hidden md:flex flex-col gap-4 justify-center bg-[#48487F] px-6 rounded-xl basis-[47%]">
-                            <span className="text-[#EDEDFA] text-[3rem] leading-[3.6rem] font-medium">560</span>
+                            <span className="text-[#EDEDFA] text-[3rem] leading-[3.6rem] font-medium">{projectCompleted}</span>
                             <span className="font-medium text-[#FFFFFF] text-base leading-5">{translations[lang][4]}</span>
                         </div>
                         <BenefitsCard title={benefits[lang][0].title} content={benefits[lang][0].content} />
                     </div>
                     <div className="flex md:hidden gap-4">
                         <div className="flex flex-col gap-4 justify-center bg-[#48487F] px-6 py-8 rounded-xl basis-[47%]">
-                            <span className="text-[#EDEDFA] text-[3rem] leading-[3.6rem] font-medium">560</span>
+                            <span className="text-[#EDEDFA] text-[3rem] leading-[3.6rem] font-medium">{projectCompleted}</span>
                             <span className="font-medium text-[#FFFFFF] text-base leading-5">{translations[lang][4]}</span>
                         </div>
                         <div className="flex flex-col gap-4 justify-center bg-[#EDEDFA] px-6 py-8 rounded-xl basis-[47%]">
-                            <span className="text-[#48487F] text-[3rem] leading-[3.6rem] font-medium">100%</span>
+                            <span className="text-[#48487F] text-[3rem] leading-[3.6rem] font-medium">{`${projectPercent}%`}</span>
                             <span className="font-medium text-[#48487F] text-base leading-5">{translations[lang][5]}</span>
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4">
                         <BenefitsCard title={benefits[lang][1].title} content={benefits[lang][1].content} />
                         <div className="hidden md:flex flex-col gap-4 justify-center bg-[#EDEDFA] px-6 rounded-xl basis-[47%]">
-                            <span className="text-[#48487F] text-[3rem] leading-[3.6rem] font-medium">100%</span>
+                            <span className="text-[#48487F] text-[3rem] leading-[3.6rem] font-medium">{`${projectPercent}%`}</span>
                             <span className="font-medium text-[#48487F] text-base leading-5">{translations[lang][5]}</span>
                         </div>
                     </div>

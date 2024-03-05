@@ -19,7 +19,7 @@ const reviews = {
         },
         {
             review: "Excellent service from M Toiture. They are very professional and the employees are polite and hardworking. Thanks to the president Mr. Patrick McIntyre.",
-            author: "Stephanie A"
+            author: "Melissa B"
         }
     ],
     "fr": [
@@ -37,7 +37,7 @@ const reviews = {
         },
         {
             review: "Excellent service de M Toiture. Ils sont très professionnels et les employés sont polis et travailleurs. Merci au président M. Patrick McIntyre.",
-            author: "Stephanie A"
+            author: "Melissa B"
         }
     ]
 }
