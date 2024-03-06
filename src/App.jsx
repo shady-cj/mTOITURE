@@ -9,7 +9,7 @@ import Gallery from "./sections/Gallery"
 import Reviews from "./sections/Reviews"
 import Footer from "./sections/Footer"
 import QuoteForm from './components/quoteForm';
-import logo from "./assets/mTOITURE.svg"
+import logo from "./assets/mTOITURE.png"
 
 function App() {
   const [openQuote, setOpenQuote] = React.useState(false)
