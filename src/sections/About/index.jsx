@@ -66,7 +66,7 @@ const Index = ({ lang }) => {
                     </div>
                     <div className="basis-3/5">
                         <h4 className="font-semibold text-sm leading-4 text-[#48487F]">{translations[lang][8]}</h4>
-                        <div className="flex flex-col md:flex-row flex-wrap gap-4 xl:gap-6 mt-8">
+                        <div className="flex flex-col md:flex-row flex-wrap gap-8 md:gap-4 xl:gap-6 mt-8">
                             {
                                 values[lang].map(({ title, desc }) => {
                                     return (

@@ -49,7 +49,7 @@ function App() {
               <button className={`border-l border-solid  border-[#E6E6E6] py-3 px-8 ${lang === "fr" ? 'text-[#F2F2FC] bg-[#48487F]' : ''}`} onClick={() => setLang("fr")}>Fr</button>
             </div>
           </div>) : (
-          <div className='fixed w-full bg-[#0E0E1A] z-20 flex flex-col justify-center items-center top-0 bottom-0 gap-12'>
+          <div className='fixed w-full bg-[#0E0E1A] z-20 flex flex-col justify-center items-center top-0 bottom-0 gap-4'>
             <img src={logo} className='w-[40%] animate-opacity' alt="" />
             <div className="loader"></div>
           </div>)
