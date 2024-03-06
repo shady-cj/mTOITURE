@@ -50,7 +50,7 @@ function App() {
             </div>
           </div>) : (
           <div className='fixed w-full bg-[#0E0E1A] z-20 flex flex-col justify-center items-center top-0 bottom-0 gap-12'>
-            <img src={logo} className='w-[25%] animate-opacity' alt="" />
+            <img src={logo} className='w-[40%] animate-opacity' alt="" />
             <div className="loader"></div>
           </div>)
       }
