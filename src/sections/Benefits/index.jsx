@@ -38,7 +38,7 @@ const Index = ({ setOpenQuote, lang }) => {
                     clearInterval(interval)
                     return prev
                 })
-            }, 10)
+            }, 60)
             interval2 = setInterval(() => {
                 setProjectPercent(prev => {
                     if (prev < 100) {
@@ -47,7 +47,7 @@ const Index = ({ setOpenQuote, lang }) => {
                     clearInterval(interval2)
                     return prev
                 })
-            }, 100)
+            }, 150)
         }
         return (() => {
             if (interval) clearInterval(interval)
